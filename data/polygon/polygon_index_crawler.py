@@ -19,7 +19,7 @@ def plot_candle_chart(df, title="Candlestick Chart with Signals"):
     fig.update_layout(title=title, xaxis_title="Time", yaxis_title="Price")
     fig.show()
 
-API_KEY = "1qCvKyfRajf_ewGpw2ryraerx5Ct_MAB"  # api key from polygon dashboard
+API_KEY = "YOUR-POLYGON-API-KEY"  # api key from polygon dashboard
 TICKER = "SPY"
 TIMEFRAME = "15"  # minutes
 YEAR = "2025"
