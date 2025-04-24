@@ -1,0 +1,28 @@
+name: Dev Folder Testing
+
+on:
+  push:
+    paths:
+      - "dev/**"  # Runs when anything in the dev folder changes
+  pull_request:
+    paths:
+      - "dev/**"  # Runs when PRs include changes in the dev folder
+
+jobs:
+  test-dev:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"  # Adjust as needed
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest dev/tests/ 
